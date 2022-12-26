@@ -1,0 +1,26 @@
+[versions]
+androidxComposeBom = "2022.12.00"
+androidxCore = "1.9.0"
+androidxLifecycle = "2.5.1"
+androidxActivityCompose = "1.6.1"
+androidGradlePlugin = "7.3.1"
+kotlin = "1.6.10"
+androidxComposeCompiler = "1.1.1"
+
+[libraries]
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-text-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
+
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+
+
+android-gradlePlugin = {group="com.android.tools.build", name="gradle", version.ref="androidGradlePlugin"}
+kotlin-gradlePlugin = {group="org.jetbrains.kotlin", name="kotlin-gradle-plugin", version.ref = "kotlin"}
+
+[bundles]
+androidx-compose-ui = ["androidx.compose.ui", "androidx.compose.ui.tooling.preview"]

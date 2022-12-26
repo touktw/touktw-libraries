@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         gradlePluginPortal()
         google()
@@ -11,6 +12,14 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+//    versionCatalogs {
+//        create("libs") {
+//            from(files("libs.versions.toml"))
+//        }
+//    }
 }
+
+
+
 rootProject.name = "Touktw Libraries"
-include ':app'
+include(":app")
