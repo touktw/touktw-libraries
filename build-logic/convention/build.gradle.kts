@@ -24,5 +24,21 @@ gradlePlugin {
             id = "touktw.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "touktw.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "touktw.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidTest") {
+            id = "touktw.android.test.instrument"
+            implementationClass = "AndroidInstrumentTestConventionPlugin"
+        }
+        register("androidHilt") {
+            id = "touktw.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }

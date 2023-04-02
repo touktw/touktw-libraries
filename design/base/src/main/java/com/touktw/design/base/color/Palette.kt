@@ -1,0 +1,58 @@
+package com.touktw.design.base.color
+
+import androidx.compose.ui.graphics.Color
+
+val white = Color(0xFFFFFFFF)
+val black = Color(0xFF000000)
+
+val brown5 = Color(0xFFEFEBE9)
+val brown10 = Color(0xFFD7CCC8)
+val brown20 = Color(0xFFBCAAA4)
+val brown30 = Color(0xFFA1887F)
+val brown40 = Color(0xFF8D6E63)
+val brown50 = Color(0xFF795548)
+val brown60 = Color(0xFF6D4C41)
+val brown70 = Color(0xFF5D4037)
+val brown80 = Color(0xFF4E342E)
+val brown90 = Color(0xFF3E2723)
+
+val dOrange5 = Color(0xFFFBE9E7)
+val dOrange10 = Color(0xFFFFCCBC)
+val dOrange20 = Color(0xFFFFAB91)
+val dOrange30 = Color(0xFFFF8A65)
+val dOrange40 = Color(0xFFFF7043)
+val dOrange50 = Color(0xFFFF5722)
+val dOrange60 = Color(0xFFF4511E)
+val dOrange70 = Color(0xFFE64A19)
+val dOrange80 = Color(0xFFD84315)
+val dOrange90 = Color(0xFFBF360C)
+
+val gray100 = Color(0xFF0E0F12)
+val gray95 = Color(0xFF15161A)
+val gray90 = Color(0xFF1F2024)
+val gray80 = Color(0xFF3A3B40)
+val gray70 = Color(0xFF65666B)
+val gray60 = Color(0xFF8B8D94)
+val gray50 = Color(0xFFA6A8AD)
+val gray40 = Color(0xFFC3C5C9)
+val gray30 = Color(0xFFDCDFE3)
+val gray20 = Color(0xFFF0F2F5)
+val gray10 = Color(0xFFF7F8FA)
+val gray10A = Color(0x1FB0B3B5)
+val gray5 = Color(0xFFFAFBFC)
+
+val red100 = Color(0xFF5C0505)
+val red95 = Color(0xFF700000)
+val red90 = Color(0xFF8F0007)
+val red80 = Color(0xFFB50719)
+val red70 = Color(0xFFCF1124)
+val red60 = Color(0xFFED394B)
+val red50 = Color(0xFFF5626D)
+val red40 = Color(0xFFFF99A0)
+val red30 = Color(0xFFFFBAC1)
+val red20 = Color(0xFFFFDBDE)
+val red10 = Color(0xFFFFDBDE)
+val red10A = Color(0x1FED394B)
+val red5 = Color(0xFFFCF4F4)
+
+

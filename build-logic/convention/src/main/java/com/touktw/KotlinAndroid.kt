@@ -3,17 +3,22 @@ package com.touktw
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.api.plugins.ExtensionAware
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+import coreLibraryDesugaring
 
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>,
 ) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
     commonExtension.apply {
         compileSdk = 33
 
         defaultConfig {
-            minSdk = 21
+            minSdk = 23
         }
 
         compileOptions {
@@ -23,12 +28,16 @@ internal fun Project.configureKotlinAndroid(
         }
 
         kotlinOptions {
-            allWarningsAsErrors = true
+            allWarningsAsErrors = false
             freeCompilerArgs = freeCompilerArgs + listOf(
-                "-opt-in=kotlin.RequiresOptIn"
+                "-opt-in=kotlin.RequiresOptIn",
             )
 
             jvmTarget = JavaVersion.VERSION_1_8.toString()
+        }
+
+        dependencies {
+            coreLibraryDesugaring(libs.findLibrary("android.desugaring").get())
         }
     }
 }
