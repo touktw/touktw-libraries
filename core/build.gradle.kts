@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.android.junit5) apply false
     alias(libs.plugins.android.hilt) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 }
 
 group = "com.touktw.core"

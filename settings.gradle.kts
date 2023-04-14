@@ -15,8 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-
-
 rootProject.name = "Touktw Libraries"
 include(":app")
 
