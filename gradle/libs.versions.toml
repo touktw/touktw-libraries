@@ -16,6 +16,10 @@ hilt = "2.44"
 retrofit = "2.9.0"
 okHttpBom = "4.10.0"
 
+kotlinxSerialization = "1.2.1"
+kotlinSerializationPlugin = "1.5.0"
+kotlinxSerializationConverter = "0.8.0"
+
 #test
 junit = "4.13.2"
 kotest = "5.5.0"
@@ -67,6 +71,7 @@ network-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", versio
 network-okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okHttpBom" }
 network-okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
 network-okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+network-retrofit-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "kotlinxSerializationConverter" }
 
 #test
 test-junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -84,11 +89,14 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
 
+# kotlinx serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
 [bundles]
 androidx-compose-ui = ["androidx.compose.ui", "androidx.compose.ui.tooling.preview"]
 test = ["test.junit", "test.kotest.runner", "test.kotest.property", "test.truth"]
 test-instrumental = ["test.truth", "androidTest.runner", "androidTest.junit5.core", "androidTest.junit.jupiter"]
-network = ["network.retrofit", "network.okhttp.bom", "network.okhttp", "network.okhttp.logging"]
+network = ["network.retrofit", "network.okhttp.bom", "network.okhttp", "network.okhttp.logging", "network.retrofit.kotlinx.serialization.converter"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -97,3 +105,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-junit5 = { id = "de.mannodermaus.android-junit5", version.ref = "androidTestJunit5Plugin" }
 android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerializationPlugin" }

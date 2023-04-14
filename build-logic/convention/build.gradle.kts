@@ -40,5 +40,9 @@ gradlePlugin {
             id = "touktw.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("kotlinSerialization") {
+            id = "touktw.kotlin.serialization"
+            implementationClass = "KotlinSerializationPlugin"
+        }
     }
 }
