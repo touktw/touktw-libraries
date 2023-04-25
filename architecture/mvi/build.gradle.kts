@@ -1,5 +1,6 @@
 plugins {
     id("touktw.android.library")
+    id("touktw.android.library.test")
 }
 
 android {

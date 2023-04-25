@@ -44,5 +44,9 @@ gradlePlugin {
             id = "touktw.kotlin.serialization"
             implementationClass = "KotlinSerializationPlugin"
         }
+        register("androidLibraryTest") {
+            id = "touktw.android.library.test"
+            implementationClass = "AndroidLibraryTestConventionPlugin"
+        }
     }
 }

@@ -61,7 +61,9 @@ internal fun <STATE : State, ACTION : Action, SIDE_EFFECT : SideEffect> statePro
         }
 
         override val reduceState: (STATE.() -> STATE) -> Unit = { reduce ->
-            scope.launch(ExceptionHandler.handler) { backingState.value.reduce() }
+            scope.launch(ExceptionHandler.handler) {
+                backingState.value = backingState.value.reduce()
+            }
         }
 
         override val withState: (STATE.() -> Unit) -> Unit = { with ->
