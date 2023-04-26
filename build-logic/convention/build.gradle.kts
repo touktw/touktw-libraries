@@ -48,5 +48,9 @@ gradlePlugin {
             id = "touktw.android.library.test"
             implementationClass = "AndroidLibraryTestConventionPlugin"
         }
+        register("mavenPublish") {
+            id = "touktw.maven.publish"
+            implementationClass = "MavenPublishConventionPlugin"
+        }
     }
 }

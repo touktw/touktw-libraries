@@ -1,6 +1,6 @@
 package com.touktw.architecture.mvi
 
-class TestViewModel : BaseViewModel<TestState, TestActions, TestSideEffect>(
+class TestMviViewModel : BaseMviViewModel<TestState, TestActions, TestSideEffect>(
     TestState()
 ) {
     override suspend fun onAction(action: TestActions) {

@@ -5,4 +5,4 @@ plugins {
 }
 
 group = "com.touktw.architecture"
-version = "1.0.0-SNAPSHOTS"
+version = "1.0.0-SNAPSHOT"

@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
-abstract class BaseViewModel<STATE : State, ACTION : Action, SIDE_EFFECT : SideEffect>(
+abstract class BaseMviViewModel<STATE : State, ACTION : Action, SIDE_EFFECT : SideEffect>(
     initialState: STATE,
     dropActionDuringProcess: Boolean = true,
 ) : ViewModel() {

@@ -12,7 +12,7 @@ class StateProducerTest : BehaviorSpec(
             collectedException = throwable
         }
 
-        val viewModel = TestViewModel()
+        val viewModel = TestMviViewModel()
         given("ViewModel 에서") {
             `when`("NormalAction 이 돌면") {
                 viewModel.dispatchAction(TestActions.NormalAction)
